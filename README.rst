@@ -1,7 +1,7 @@
-Docker-node-red
+Dokku-node-red-contrib-chatbot
 ===================
 
-A docker image to deploy instances of node-red with additional nodes.
+A docker image to deploy `RedBot <https://github.com/guidone/node-red-contrib-chatbot>`_ to dokku.
 
 The following env vars are used to configure the container:
   - NO_AUTH: if set disable any authentication methods
@@ -21,3 +21,4 @@ If used inside dokku you can mount the volume using the following command
 ::
 
   dokku storage:mount $APP /var/lib/dokku/data/storage/$APP:/app/.nodered/
+  dokku ps:restart $APP

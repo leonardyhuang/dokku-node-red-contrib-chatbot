@@ -1,9 +1,9 @@
-FROM node:lts-alpine
+FROM nikolaik/python-nodejs:python2.7-nodejs12
 
 WORKDIR /app
 
-RUN apk add --update bash ca-certificates
-RUN npm install -g --unsafe-perm node-red@0.19.5
+RUN npm install -g --unsafe-perm node-red
+RUN npm install -g --unsafe-perm node-red-contrib-chatbot
 
 ADD . /app
 
