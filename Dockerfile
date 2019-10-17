@@ -4,6 +4,7 @@ WORKDIR /app
 
 RUN npm install -g --unsafe-perm node-red
 RUN npm install -g --unsafe-perm node-red-contrib-chatbot
+RUN npm install -g --unsafe-perm node-red-contrib-aws
 
 ADD . /app
 
