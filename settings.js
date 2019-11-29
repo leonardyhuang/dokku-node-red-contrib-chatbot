@@ -13,5 +13,13 @@ module.exports =  {
         "image": null,
         "url": "#"
     }
+  },
+  logging: {
+    // Console logging
+    console: {
+      level: "debug",
+      metrics: false,
+      audit: false
+    }
   }
 }
