@@ -13,5 +13,6 @@ module.exports =  {
         "image": null,
         "url": "#"
     }
-  }
+  },
+  apiMaxLength: process.env.API_MAX_LENGTH
 }
