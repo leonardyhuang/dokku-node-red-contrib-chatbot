@@ -14,5 +14,5 @@ module.exports =  {
         "url": "#"
     }
   },
-  apiMaxLength: "10mb"
+  apiMaxLength: process.env.API_MAX_LENGTH
 }

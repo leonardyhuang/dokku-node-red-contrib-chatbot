@@ -29,5 +29,6 @@ else
 fi
 
 env
+export API_MAX_LENGTH="10mb"
 echo "debug: Starting nodered... "
 node-red -s /app/settings.js
