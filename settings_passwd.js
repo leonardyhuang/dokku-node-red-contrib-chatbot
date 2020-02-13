@@ -22,6 +22,5 @@ module.exports = {
         }
       })
    });
-  },
-  apiMaxLength: process.env.API_MAX_LENGTH
+  }
 }
