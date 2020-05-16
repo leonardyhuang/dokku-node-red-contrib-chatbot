@@ -1,5 +1,5 @@
-var bcrypt = require('bcryptjs')
-var fs = require('fs')
+var bcrypt = require("bcryptjs");
+var fs = require("fs");
 var randomstring = require("randomstring");
 
 /*
@@ -13,23 +13,23 @@ Use -f option to force generation of new password if .passwd file exists.
 Use -p option to preset a know password
 */
 
-if (fs.existsSync('.nodered/.passwd') && process.argv.indexOf('-f') == -1) {
-  console.log('Password already generated, skipping...')
-  return 0
+if (fs.existsSync(".nodered/.passwd") && process.argv.indexOf("-f") == -1) {
+  console.log("Password already generated, skipping...");
+  return 0;
 }
 
 if (process.argv.indexOf("-p") == -1) {
-  pass = randomstring.generate(10);
+  pass = randomstring.generate(16);
 
-  console.log("************* YOUR ADMIN PASS ******************")
-  console.log(pass)
-  console.log("***********************************************")
+  console.log("************* YOUR ADMIN PASS ******************");
+  console.log(pass);
+  console.log("***********************************************");
 } else {
-  pass = process.argv[process.argv.indexOf("-p") + 1]
+  pass = process.argv[process.argv.indexOf("-p") + 1];
 }
 
-h_passw = bcrypt.hashSync(pass, 8)
+h_passw = bcrypt.hashSync(pass, 8);
 
-fs.writeFile('.nodered/.passwd', h_passw, 'utf8', function (err) {
+fs.writeFile(".nodered/.passwd", h_passw, "utf8", function (err) {
   if (err) return console.log(err);
 });
