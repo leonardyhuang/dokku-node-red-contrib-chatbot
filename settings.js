@@ -23,7 +23,8 @@ module.exports = {
       metrics: false,
       handler: function (settings) {
         return function (msg) {
-          console.debug(JSON.stringify(msg));
+          eval("var msgObj = " + msg);
+          console.debug(JSON.stringify(msgObj));
         };
       },
     },
