@@ -18,10 +18,14 @@ module.exports = {
     },
   },
   logging: {
-    console: {
+    customLogging: {
       level: "debug",
       metrics: false,
-      audit: false,
+      handler: function (settings) {
+        return function (msg) {
+          console.debug(JSON.stringify(msg));
+        };
+      },
     },
   },
 };
