@@ -23,7 +23,7 @@ module.exports = {
       metrics: false,
       handler: function (settings) {
         return function (msg) {
-          console.log(msg.timestamp, msg.event);
+          console.log(msg.timestamp, msg);
         };
       },
     },
