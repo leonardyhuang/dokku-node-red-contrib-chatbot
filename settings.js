@@ -28,4 +28,7 @@ module.exports = {
       },
     },
   },
+  functionGlobalContext: {
+    environment: "production",
+  },
 };
