@@ -1,7 +1,7 @@
 Dokku-node-red-contrib-chatbot
 ===================
 
-A docker image to deploy `RedBot <https://github.com/guidone/node-red-contrib-chatbot>`_ to dokku.
+A docker image to deploy `RedBot <https://github.com/guidone/node-red-contrib-chatbot>`_ to `dokku <https://github.com/dokku/dokku>`_.
 
 The following env vars are used to configure the container:
   - NO_AUTH: if set disable any authentication methods
@@ -16,7 +16,7 @@ You can also add a 'extra_modules.txt' inside '/app/config' with a list of flow 
 Dokku
 -------------
 
-If used inside dokku you can mount the volume using the following command
+If used inside dokku you can mount the volume using the following command:
 
 ::
 
