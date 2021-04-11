@@ -6,7 +6,7 @@ RUN npm install -g --unsafe-perm node-red
 RUN npm install -g --unsafe-perm node-red-contrib-aws
 RUN npm install -g --unsafe-perm node-red-contrib-chatbot
 RUN npm install -g --unsafe-perm node-red-contrib-function-npm
-RUN npm install -g --unsafe-perm @sentry/node@6.1.0
+RUN npm install -g --unsafe-perm @sentry/node@6.2.5
 ADD . /app
 
 # config and flows files
