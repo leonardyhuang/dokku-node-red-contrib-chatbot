@@ -12,7 +12,8 @@ if [[ -f /app/.nodered/extra_modules.txt ]]; then
 fi
 
 # we are going to use this in user-auth. install locally
-npm install bcryptjs randomstring when request debug
+npm install bcryptjs@latest randomstring@latest when@latest request@latest debug@latest
+
 if [[ -n "$NO_AUTH" ]]; then
     # if NO_AUTH env is set
     echo "*** WARNING: Disable auth ***"
